@@ -1,6 +1,6 @@
 FROM gitpod/workspace-full-vnc
 
-# Dependences for chrome
+# Dependencies for chrome
 RUN sudo apt-get update \
  && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
    libgtk2.0-0 \
@@ -13,11 +13,13 @@ RUN sudo apt-get update \
    libxtst6 \
    xauth \
    xvfb \
-   python2.7 \
-   astyle \
-   openjdk-8-jdk \
-   rsync \
-   scala \
- && sudo rm -rf /var/lib/apt/lists/* \
- && export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 \
- && export PATH=$JAVA_HOME/bin:$PATH
+ && sudo rm -rf /var/lib/apt/lists/*
+
+# Install legacylauncher from the provided URL
+RUN wget https://llaun.ch/repo/downloads/TL_legacy.deb \
+ && sudo dpkg -i TL_legacy.deb \
+ && sudo apt-get install -f \
+ && rm TL_legacy.deb
+
+# Run gp-vncsession in the background
+CMD gp-vncsession & tail -f /dev/null
