@@ -13,13 +13,9 @@ RUN sudo apt-get update \
    libxtst6 \
    xauth \
    xvfb \
+   astyle \
+   openjdk-8-jdk \
+   rsync \
+   scala \
+   python2.7 \
  && sudo rm -rf /var/lib/apt/lists/*
-
-# Install legacylauncher from the provided URL
-RUN wget https://llaun.ch/repo/downloads/TL_legacy.deb \
- && sudo dpkg -i TL_legacy.deb \
- && sudo apt-get install -f \
- && rm TL_legacy.deb
-
-# Run gp-vncsession in the background
-CMD gp-vncsession & tail -f /dev/null
