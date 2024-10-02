@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8fbfece3-fec1-4edf-a73f-fd292793db81" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.devcontainer/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.devcontainer/devcontainer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/astyle.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/conf/astyle.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.block.BlockCocoa.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.block.BlockFurnace.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.block.BlockNewLog.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.block.BlockOldLog.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.block.BlockRailPowered.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.block.BlockTripWireHook.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.block.BlockWallSign.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.block.state.BlockState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.block.state.BlockStateBase.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.Minecraft.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.gui.GuiOverlayDebug.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.gui.GuiPageButtonList.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.gui.GuiSnooper.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.gui.stream.GuiStreamUnavailable.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.network.NetHandlerPlayClient.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.particle.EffectRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.renderer.BlockModelShapes.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.renderer.EntityRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.renderer.RenderGlobal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.renderer.WorldVertexBufferUploader.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.renderer.block.statemap.StateMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.renderer.entity.RenderManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.renderer.entity.RendererLivingEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.renderer.texture.TextureManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.renderer.vertex.VertexFormat.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.resources.ResourcePackRepository.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.resources.SimpleResource.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.client.stream.IngestServerTester.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.command.PlayerSelector.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.entity.ai.EntityAIAvoidEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.entity.ai.EntityAIEatGrass.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.entity.item.EntityMinecart.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.entity.player.EntityPlayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.inventory.ContainerPlayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.item.ItemHoe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.item.ItemMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.item.ItemSlab.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.network.EnumConnectionState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.network.play.server.S42PacketCombatEvent.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.scoreboard.Scoreboard.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.tileentity.TileEntityChest.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.util.Cartesian.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.util.ClassInheritanceMultiMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.util.EnumTypeAdapterFactory.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.util.HttpUtil.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.util.MessageSerializer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.util.ThreadSafeBoundList.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.world.World.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.world.gen.feature.WorldGenDesertWells.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.world.gen.layer.GenLayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.world.gen.structure.StructureMineshaftPieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.world.gen.structure.StructureNetherBridgePieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.world.gen.structure.StructureStrongholdPieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_ff/net.minecraft.world.gen.structure.StructureVillagePieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.block.BlockCocoa.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.block.BlockFurnace.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.block.BlockNewLog.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.block.BlockOldLog.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.block.BlockRailPowered.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.block.BlockTripWireHook.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.block.BlockWallSign.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.block.state.BlockState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.block.state.BlockStateBase.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.Minecraft.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.gui.GuiOverlayDebug.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.gui.GuiPageButtonList.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.gui.GuiSnooper.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.gui.stream.GuiStreamUnavailable.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.network.NetHandlerPlayClient.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.particle.EffectRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.renderer.BlockModelShapes.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.renderer.EntityRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.renderer.RenderGlobal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.renderer.WorldVertexBufferUploader.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.renderer.block.statemap.StateMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.renderer.entity.RenderManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.renderer.entity.RendererLivingEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.renderer.texture.TextureManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.renderer.vertex.VertexFormat.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.resources.ResourcePackRepository.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.resources.SimpleResource.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.client.stream.IngestServerTester.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.command.PlayerSelector.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.entity.ai.EntityAIAvoidEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.entity.ai.EntityAIEatGrass.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.entity.item.EntityMinecart.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.entity.player.EntityPlayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.inventory.ContainerPlayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.item.ItemHoe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.item.ItemMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.item.ItemSlab.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.network.EnumConnectionState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.network.play.server.S42PacketCombatEvent.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.scoreboard.Scoreboard.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.server.management.UserList.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.tileentity.TileEntityChest.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.util.Cartesian.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.util.ClassInheritanceMultiMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.util.EnumTypeAdapterFactory.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.util.HttpUtil.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.util.MessageSerializer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.util.ThreadSafeBoundList.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.world.World.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.world.gen.feature.WorldGenDesertWells.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.world.gen.layer.GenLayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.world.gen.structure.StructureMineshaftPieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.world.gen.structure.StructureNetherBridgePieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.world.gen.structure.StructureStrongholdPieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_merged_ff/net.minecraft.world.gen.structure.StructureVillagePieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.block.BlockCocoa.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.block.BlockNewLog.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.block.BlockOldLog.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.block.BlockRailPowered.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.block.BlockTripWireHook.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.block.BlockWallSign.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.block.state.BlockState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.block.state.BlockStateBase.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.command.PlayerSelector.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.entity.ai.EntityAIAvoidEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.entity.ai.EntityAIEatGrass.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.entity.item.EntityMinecart.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.entity.player.EntityPlayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.inventory.ContainerPlayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.item.ItemHoe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.item.ItemMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.item.ItemSlab.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.network.EnumConnectionState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.network.play.server.S42PacketCombatEvent.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.scoreboard.Scoreboard.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.server.management.UserList.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.tileentity.TileEntityChest.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.util.Cartesian.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.util.ClassInheritanceMultiMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.util.EnumTypeAdapterFactory.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.util.MessageSerializer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.world.World.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.world.gen.feature.WorldGenDesertWells.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.world.gen.layer.GenLayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.world.gen.structure.StructureMineshaftPieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.world.gen.structure.StructureNetherBridgePieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.world.gen.structure.StructureStrongholdPieces.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/patches/minecraft_server_ff/net.minecraft.world.gen.structure.StructureVillagePieces.java.patch" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "KnoxTheDev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/KnoxTheDev/MCP919.git",
+    "accountId": "8467eb55-eac3-45f1-b2ff-e20ca0d1512c"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ms2y6dBIuO4Yz5cgePnEOOkn6D" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Batch.cleanup.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Yugam Software/MCP919",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "copyright.filetypes.JAVA",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="cleanup" type="BatchConfigurationType" factoryName="Batch" temporary="true">
+      <module name="MCP919" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="cleanup.bat" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Batch.cleanup" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fbfece3-fec1-4edf-a73f-fd292793db81" name="Changes" comment="" />
+      <created>1727851219024</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727851219024</updated>
+      <workItem from="1727851221765" duration="1634000" />
+      <workItem from="1727852917174" duration="1171000" />
+      <workItem from="1727854743822" duration="2596000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
