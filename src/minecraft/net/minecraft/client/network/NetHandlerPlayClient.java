@@ -1561,6 +1561,7 @@ public class NetHandlerPlayClient implements INetHandlerPlayClient
         packetIn.func_179788_a(this.clientWorldController.getWorldBorder());
     }
 
+    @SuppressWarnings("incomplete-switch")
     public void handleTitle(S45PacketTitle packetIn)
     {
         PacketThreadUtil.checkThreadAndEnqueue(packetIn, this, this.gameController);
@@ -1613,6 +1614,7 @@ public class NetHandlerPlayClient implements INetHandlerPlayClient
         }
     }
 
+    @SuppressWarnings("incomplete-switch")
     public void handlePlayerListItem(S38PacketPlayerListItem packetIn)
     {
         PacketThreadUtil.checkThreadAndEnqueue(packetIn, this, this.gameController);

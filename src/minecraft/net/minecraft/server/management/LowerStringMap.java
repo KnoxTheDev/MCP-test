@@ -32,22 +32,22 @@ public class LowerStringMap<V> implements Map<String, V>
 
     public V get(Object p_get_1_)
     {
-        return this.internalMap.get(p_get_1_.toString().toLowerCase());
+        return (V)this.internalMap.get(p_get_1_.toString().toLowerCase());
     }
 
     public V put(String p_put_1_, V p_put_2_)
     {
-        return this.internalMap.put(p_put_1_.toLowerCase(), p_put_2_);
+        return (V)this.internalMap.put(p_put_1_.toLowerCase(), p_put_2_);
     }
 
     public V remove(Object p_remove_1_)
     {
-        return this.internalMap.remove(p_remove_1_.toString().toLowerCase());
+        return (V)this.internalMap.remove(p_remove_1_.toString().toLowerCase());
     }
 
-    public void putAll(Map <? extends String, ? extends V > p_putAll_1_)
+    public void putAll(Map<? extends String, ? extends V> p_putAll_1_)
     {
-        for (Entry <? extends String, ? extends V > entry : p_putAll_1_.entrySet())
+        for (Entry<? extends String, ? extends V> entry : p_putAll_1_.entrySet())
         {
             this.put((String)entry.getKey(), entry.getValue());
         }

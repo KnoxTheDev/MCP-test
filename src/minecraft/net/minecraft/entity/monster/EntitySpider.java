@@ -64,8 +64,9 @@ public class EntitySpider extends EntityMob
     protected void entityInit()
     {
         super.entityInit();
-        this.dataWatcher.addObject(16, new Byte((byte)0));
+        this.dataWatcher.addObject(16, Byte.valueOf((byte)0));
     }
+    
 
     /**
      * Called to update the entity's position/logic.
@@ -242,7 +243,7 @@ public class EntitySpider extends EntityMob
 
     static class AISpiderAttack extends EntityAIAttackOnCollide
     {
-        public AISpiderAttack(EntitySpider spider, Class <? extends Entity > targetClass)
+        public AISpiderAttack(EntitySpider spider, Class<? extends Entity> targetClass)
         {
             super(spider, targetClass, 1.0D, true);
         }

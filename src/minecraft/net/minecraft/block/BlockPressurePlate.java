@@ -37,7 +37,7 @@ public class BlockPressurePlate extends BlockBasePressurePlate
     protected int computeRedstoneStrength(World worldIn, BlockPos pos)
     {
         AxisAlignedBB axisalignedbb = this.getSensitiveAABB(pos);
-        List <? extends Entity > list;
+        List<? extends Entity> list;
 
         switch (this.sensitivity)
         {

@@ -49,6 +49,7 @@ public class VertexFormat
         this.nextOffset = 0;
     }
 
+    @SuppressWarnings("incomplete-switch")
     public VertexFormat addElement(VertexFormatElement element)
     {
         if (element.isPositionElement() && this.hasPosition())

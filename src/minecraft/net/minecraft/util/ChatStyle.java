@@ -315,32 +315,32 @@ public class ChatStyle
 
             if (this.getColor() != null)
             {
-                stringbuilder.append((Object)this.getColor());
+                stringbuilder.append(this.getColor());
             }
 
             if (this.getBold())
             {
-                stringbuilder.append((Object)EnumChatFormatting.BOLD);
+                stringbuilder.append(EnumChatFormatting.BOLD);
             }
 
             if (this.getItalic())
             {
-                stringbuilder.append((Object)EnumChatFormatting.ITALIC);
+                stringbuilder.append(EnumChatFormatting.ITALIC);
             }
 
             if (this.getUnderlined())
             {
-                stringbuilder.append((Object)EnumChatFormatting.UNDERLINE);
+                stringbuilder.append(EnumChatFormatting.UNDERLINE);
             }
 
             if (this.getObfuscated())
             {
-                stringbuilder.append((Object)EnumChatFormatting.OBFUSCATED);
+                stringbuilder.append(EnumChatFormatting.OBFUSCATED);
             }
 
             if (this.getStrikethrough())
             {
-                stringbuilder.append((Object)EnumChatFormatting.STRIKETHROUGH);
+                stringbuilder.append(EnumChatFormatting.STRIKETHROUGH);
             }
 
             return stringbuilder.toString();

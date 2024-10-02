@@ -44,7 +44,7 @@ public abstract class RendererLivingEntity<T extends EntityLivingBase> extends R
 
     protected <V extends EntityLivingBase, U extends LayerRenderer<V>> boolean addLayer(U layer)
     {
-        return this.layerRenderers.add(layer);
+        return this.layerRenderers.add((LayerRenderer<T>)layer);
     }
 
     protected <V extends EntityLivingBase, U extends LayerRenderer<V>> boolean removeLayer(U layer)

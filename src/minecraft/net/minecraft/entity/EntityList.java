@@ -77,17 +77,17 @@ import org.apache.logging.log4j.Logger;
 public class EntityList
 {
     private static final Logger logger = LogManager.getLogger();
-    private static final Map < String, Class <? extends Entity >> stringToClassMapping = Maps. < String, Class <? extends Entity >> newHashMap();
-    private static final Map < Class <? extends Entity > , String > classToStringMapping = Maps. < Class <? extends Entity > , String > newHashMap();
-    private static final Map < Integer, Class <? extends Entity >> idToClassMapping = Maps. < Integer, Class <? extends Entity >> newHashMap();
-    private static final Map < Class <? extends Entity > , Integer > classToIDMapping = Maps. < Class <? extends Entity > , Integer > newHashMap();
+    private static final Map<String, Class<? extends Entity>> stringToClassMapping = Maps.<String, Class<? extends Entity>>newHashMap();
+    private static final Map<Class<? extends Entity>, String> classToStringMapping = Maps.<Class<? extends Entity>, String>newHashMap();
+    private static final Map<Integer, Class<? extends Entity>> idToClassMapping = Maps.<Integer, Class<? extends Entity>>newHashMap();
+    private static final Map<Class<? extends Entity>, Integer> classToIDMapping = Maps.<Class<? extends Entity>, Integer>newHashMap();
     private static final Map<String, Integer> stringToIDMapping = Maps.<String, Integer>newHashMap();
     public static final Map<Integer, EntityList.EntityEggInfo> entityEggs = Maps.<Integer, EntityList.EntityEggInfo>newLinkedHashMap();
 
     /**
      * adds a mapping between Entity classes and both a string representation and an ID
      */
-    private static void addMapping(Class <? extends Entity > entityClass, String entityName, int id)
+    private static void addMapping(Class<? extends Entity> entityClass, String entityName, int id)
     {
         if (stringToClassMapping.containsKey(entityName))
         {
@@ -118,7 +118,7 @@ public class EntityList
     /**
      * Adds a entity mapping with egg info.
      */
-    private static void addMapping(Class <? extends Entity > entityClass, String entityName, int entityID, int baseColor, int spotColor)
+    private static void addMapping(Class<? extends Entity> entityClass, String entityName, int entityID, int baseColor, int spotColor)
     {
         addMapping(entityClass, entityName, entityID);
         entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, baseColor, spotColor));
@@ -133,7 +133,7 @@ public class EntityList
 
         try
         {
-            Class <? extends Entity > oclass = (Class)stringToClassMapping.get(entityName);
+            Class<? extends Entity> oclass = (Class)stringToClassMapping.get(entityName);
 
             if (oclass != null)
             {
@@ -163,7 +163,7 @@ public class EntityList
 
         try
         {
-            Class <? extends Entity > oclass = (Class)stringToClassMapping.get(nbt.getString("id"));
+            Class<? extends Entity> oclass = (Class)stringToClassMapping.get(nbt.getString("id"));
 
             if (oclass != null)
             {
@@ -196,7 +196,7 @@ public class EntityList
 
         try
         {
-            Class <? extends Entity > oclass = getClassFromID(entityID);
+            Class<? extends Entity> oclass = getClassFromID(entityID);
 
             if (oclass != null)
             {
@@ -225,7 +225,7 @@ public class EntityList
         return integer == null ? 0 : integer.intValue();
     }
 
-    public static Class <? extends Entity > getClassFromID(int entityID)
+    public static Class<? extends Entity> getClassFromID(int entityID)
     {
         return (Class)idToClassMapping.get(Integer.valueOf(entityID));
     }
@@ -266,7 +266,7 @@ public class EntityList
 
         for (String s : set)
         {
-            Class <? extends Entity > oclass = (Class)stringToClassMapping.get(s);
+            Class<? extends Entity> oclass = (Class)stringToClassMapping.get(s);
 
             if ((oclass.getModifiers() & 1024) != 1024)
             {

@@ -103,7 +103,7 @@ import net.minecraft.world.World;
 
 public class RenderManager
 {
-    private Map < Class <? extends Entity > , Render <? extends Entity >> entityRenderMap = Maps. < Class <? extends Entity > , Render <? extends Entity >> newHashMap();
+    private Map<Class<? extends Entity>, Render<? extends Entity>> entityRenderMap = Maps.<Class<? extends Entity>, Render<? extends Entity>>newHashMap();
     private Map<String, RenderPlayer> skinMap = Maps.<String, RenderPlayer>newHashMap();
     private RenderPlayer playerRenderer;
 
@@ -208,17 +208,17 @@ public class RenderManager
         this.renderPosZ = renderPosZIn;
     }
 
-    public <T extends Entity> Render<T> getEntityClassRenderObject(Class <? extends Entity > entityClass)
+    public <T extends Entity> Render<T> getEntityClassRenderObject(Class<? extends Entity> entityClass)
     {
-        Render <? extends Entity > render = (Render)this.entityRenderMap.get(entityClass);
+        Render<? extends Entity> render = (Render)this.entityRenderMap.get(entityClass);
 
         if (render == null && entityClass != Entity.class)
         {
-            render = this.<Entity>getEntityClassRenderObject(entityClass.getSuperclass());
+            render = this.<Entity>getEntityClassRenderObject((Class<? extends Entity>)entityClass.getSuperclass());
             this.entityRenderMap.put(entityClass, render);
         }
 
-        return render;
+        return (Render<T>)render;
     }
 
     public <T extends Entity> Render<T> getEntityRenderObject(Entity entityIn)
@@ -227,7 +227,7 @@ public class RenderManager
         {
             String s = ((AbstractClientPlayer)entityIn).getSkinType();
             RenderPlayer renderplayer = (RenderPlayer)this.skinMap.get(s);
-            return renderplayer != null ? renderplayer : this.playerRenderer;
+            return (Render<T>)(renderplayer != null ? renderplayer : this.playerRenderer);
         }
         else
         {

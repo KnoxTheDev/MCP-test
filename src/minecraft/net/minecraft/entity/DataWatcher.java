@@ -22,7 +22,7 @@ public class DataWatcher
 
     /** When isBlank is true the DataWatcher is not watching any objects */
     private boolean isBlank = true;
-    private static final Map < Class<?>, Integer > dataTypes = Maps. < Class<?>, Integer > newHashMap();
+    private static final Map<Class<?>, Integer> dataTypes = Maps.<Class<?>, Integer>newHashMap();
     private final Map<Integer, DataWatcher.WatchableObject> watchedObjects = Maps.<Integer, DataWatcher.WatchableObject>newHashMap();
 
     /** true if one or more object was changed */

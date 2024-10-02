@@ -99,6 +99,8 @@ public class BlockOldLog extends BlockLog
         return iblockstate;
     }
 
+    @SuppressWarnings("incomplete-switch")
+
     /**
      * Convert the BlockState into the correct metadata value
      */

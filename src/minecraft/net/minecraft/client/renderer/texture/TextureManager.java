@@ -55,7 +55,7 @@ public class TextureManager implements ITickable, IResourceManagerReloadListener
         }
     }
 
-    public boolean loadTexture(ResourceLocation textureLocation, final ITextureObject textureObj)
+    public boolean loadTexture(ResourceLocation textureLocation, ITextureObject textureObj)
     {
         boolean flag = true;
 
@@ -67,11 +67,12 @@ public class TextureManager implements ITickable, IResourceManagerReloadListener
         {
             logger.warn((String)("Failed to load texture: " + textureLocation), (Throwable)ioexception);
             textureObj = TextureUtil.missingTexture;
-            this.mapTextureObjects.put(textureLocation, (ITextureObject)textureObj);
+            this.mapTextureObjects.put(textureLocation, textureObj);
             flag = false;
         }
         catch (Throwable throwable)
         {
+            final ITextureObject textureObjf = textureObj;
             CrashReport crashreport = CrashReport.makeCrashReport(throwable, "Registering texture");
             CrashReportCategory crashreportcategory = crashreport.makeCategory("Resource location being registered");
             crashreportcategory.addCrashSection("Resource location", textureLocation);
@@ -79,13 +80,13 @@ public class TextureManager implements ITickable, IResourceManagerReloadListener
             {
                 public String call() throws Exception
                 {
-                    return textureObj.getClass().getName();
+                    return textureObjf.getClass().getName();
                 }
             });
             throw new ReportedException(crashreport);
         }
 
-        this.mapTextureObjects.put(textureLocation, (ITextureObject)textureObj);
+        this.mapTextureObjects.put(textureLocation, textureObj);
         return flag;
     }
 

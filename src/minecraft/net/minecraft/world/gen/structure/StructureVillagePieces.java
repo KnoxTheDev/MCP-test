@@ -25,6 +25,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManager;
 
+@SuppressWarnings("incomplete-switch")
 public class StructureVillagePieces
 {
     public static void registerVillagePieces()
@@ -89,7 +90,7 @@ public class StructureVillagePieces
 
     private static StructureVillagePieces.Village func_176065_a(StructureVillagePieces.Start start, StructureVillagePieces.PieceWeight weight, List<StructureComponent> p_176065_2_, Random rand, int p_176065_4_, int p_176065_5_, int p_176065_6_, EnumFacing facing, int p_176065_8_)
     {
-        Class <? extends StructureVillagePieces.Village > oclass = weight.villagePieceClass;
+        Class<? extends StructureVillagePieces.Village> oclass = weight.villagePieceClass;
         StructureVillagePieces.Village structurevillagepieces$village = null;
 
         if (oclass == StructureVillagePieces.House4Garden.class)
@@ -1368,12 +1369,12 @@ public class StructureVillagePieces
 
     public static class PieceWeight
     {
-        public Class <? extends StructureVillagePieces.Village > villagePieceClass;
+        public Class<? extends StructureVillagePieces.Village> villagePieceClass;
         public final int villagePieceWeight;
         public int villagePiecesSpawned;
         public int villagePiecesLimit;
 
-        public PieceWeight(Class <? extends StructureVillagePieces.Village > p_i2098_1_, int p_i2098_2_, int p_i2098_3_)
+        public PieceWeight(Class<? extends StructureVillagePieces.Village> p_i2098_1_, int p_i2098_2_, int p_i2098_3_)
         {
             this.villagePieceClass = p_i2098_1_;
             this.villagePieceWeight = p_i2098_2_;

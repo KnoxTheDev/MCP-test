@@ -278,7 +278,7 @@ public class BlockModelShapes
             protected ModelResourceLocation getModelResourceLocation(IBlockState state)
             {
                 Map<IProperty, Comparable> map = Maps.<IProperty, Comparable>newLinkedHashMap(state.getProperties());
-                String s = BlockDirt.VARIANT.getName((Comparable)map.remove(BlockDirt.VARIANT));
+                String s = BlockDirt.VARIANT.getName((BlockDirt.DirtType)map.remove(BlockDirt.VARIANT));
 
                 if (BlockDirt.DirtType.PODZOL != state.getValue(BlockDirt.VARIANT))
                 {
@@ -293,7 +293,7 @@ public class BlockModelShapes
             protected ModelResourceLocation getModelResourceLocation(IBlockState state)
             {
                 Map<IProperty, Comparable> map = Maps.<IProperty, Comparable>newLinkedHashMap(state.getProperties());
-                String s = BlockStoneSlab.VARIANT.getName((Comparable)map.remove(BlockStoneSlab.VARIANT));
+                String s = BlockStoneSlab.VARIANT.getName((BlockStoneSlab.EnumType)map.remove(BlockStoneSlab.VARIANT));
                 map.remove(BlockStoneSlab.SEAMLESS);
                 String s1 = ((Boolean)state.getValue(BlockStoneSlab.SEAMLESS)).booleanValue() ? "all" : "normal";
                 return new ModelResourceLocation(s + "_double_slab", s1);
@@ -304,7 +304,7 @@ public class BlockModelShapes
             protected ModelResourceLocation getModelResourceLocation(IBlockState state)
             {
                 Map<IProperty, Comparable> map = Maps.<IProperty, Comparable>newLinkedHashMap(state.getProperties());
-                String s = BlockStoneSlabNew.VARIANT.getName((Comparable)map.remove(BlockStoneSlabNew.VARIANT));
+                String s = BlockStoneSlabNew.VARIANT.getName((BlockStoneSlabNew.EnumType)map.remove(BlockStoneSlabNew.VARIANT));
                 map.remove(BlockStoneSlab.SEAMLESS);
                 String s1 = ((Boolean)state.getValue(BlockStoneSlabNew.SEAMLESS)).booleanValue() ? "all" : "normal";
                 return new ModelResourceLocation(s + "_double_slab", s1);

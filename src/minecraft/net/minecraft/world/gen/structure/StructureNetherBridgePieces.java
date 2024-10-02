@@ -14,6 +14,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 
+@SuppressWarnings("incomplete-switch")
 public class StructureNetherBridgePieces
 {
     private static final StructureNetherBridgePieces.PieceWeight[] primaryComponents = new StructureNetherBridgePieces.PieceWeight[] {new StructureNetherBridgePieces.PieceWeight(StructureNetherBridgePieces.Straight.class, 30, 0, true), new StructureNetherBridgePieces.PieceWeight(StructureNetherBridgePieces.Crossing3.class, 10, 4), new StructureNetherBridgePieces.PieceWeight(StructureNetherBridgePieces.Crossing.class, 10, 4), new StructureNetherBridgePieces.PieceWeight(StructureNetherBridgePieces.Stairs.class, 10, 3), new StructureNetherBridgePieces.PieceWeight(StructureNetherBridgePieces.Throne.class, 5, 2), new StructureNetherBridgePieces.PieceWeight(StructureNetherBridgePieces.Entrance.class, 5, 1)};
@@ -40,7 +41,7 @@ public class StructureNetherBridgePieces
 
     private static StructureNetherBridgePieces.Piece func_175887_b(StructureNetherBridgePieces.PieceWeight p_175887_0_, List<StructureComponent> p_175887_1_, Random p_175887_2_, int p_175887_3_, int p_175887_4_, int p_175887_5_, EnumFacing p_175887_6_, int p_175887_7_)
     {
-        Class <? extends StructureNetherBridgePieces.Piece > oclass = p_175887_0_.weightClass;
+        Class<? extends StructureNetherBridgePieces.Piece> oclass = p_175887_0_.weightClass;
         StructureNetherBridgePieces.Piece structurenetherbridgepieces$piece = null;
 
         if (oclass == StructureNetherBridgePieces.Straight.class)
@@ -1126,13 +1127,13 @@ public class StructureNetherBridgePieces
 
     static class PieceWeight
     {
-        public Class <? extends StructureNetherBridgePieces.Piece > weightClass;
+        public Class<? extends StructureNetherBridgePieces.Piece> weightClass;
         public final int field_78826_b;
         public int field_78827_c;
         public int field_78824_d;
         public boolean field_78825_e;
 
-        public PieceWeight(Class <? extends StructureNetherBridgePieces.Piece > p_i2055_1_, int p_i2055_2_, int p_i2055_3_, boolean p_i2055_4_)
+        public PieceWeight(Class<? extends StructureNetherBridgePieces.Piece> p_i2055_1_, int p_i2055_2_, int p_i2055_3_, boolean p_i2055_4_)
         {
             this.weightClass = p_i2055_1_;
             this.field_78826_b = p_i2055_2_;
@@ -1140,7 +1141,7 @@ public class StructureNetherBridgePieces
             this.field_78825_e = p_i2055_4_;
         }
 
-        public PieceWeight(Class <? extends StructureNetherBridgePieces.Piece > p_i2056_1_, int p_i2056_2_, int p_i2056_3_)
+        public PieceWeight(Class<? extends StructureNetherBridgePieces.Piece> p_i2056_1_, int p_i2056_2_, int p_i2056_3_)
         {
             this(p_i2056_1_, p_i2056_2_, p_i2056_3_, false);
         }

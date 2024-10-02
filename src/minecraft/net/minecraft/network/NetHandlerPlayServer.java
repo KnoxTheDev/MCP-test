@@ -14,6 +14,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Callable;
+import java.util.EnumSet;
 import net.minecraft.block.material.Material;
 import net.minecraft.command.server.CommandBlockLogic;
 import net.minecraft.crash.CrashReport;
@@ -181,9 +182,9 @@ public class NetHandlerPlayServer implements INetHandlerPlayServer, ITickable
     public void kickPlayerFromServer(String reason)
     {
         final ChatComponentText chatcomponenttext = new ChatComponentText(reason);
-        this.netManager.sendPacket(new S40PacketDisconnect(chatcomponenttext), new GenericFutureListener < Future <? super Void >> ()
+        this.netManager.sendPacket(new S40PacketDisconnect(chatcomponenttext), new GenericFutureListener<Future<? super Void>>()
         {
-            public void operationComplete(Future <? super Void > p_operationComplete_1_) throws Exception
+            public void operationComplete(Future<? super Void> p_operationComplete_1_) throws Exception
             {
                 NetHandlerPlayServer.this.netManager.closeChannel(chatcomponenttext);
             }
@@ -440,46 +441,40 @@ public class NetHandlerPlayServer implements INetHandlerPlayServer, ITickable
         }
     }
 
-    public void setPlayerLocation(double x, double y, double z, float yaw, float pitch)
-    {
-        this.setPlayerLocation(x, y, z, yaw, pitch, Collections.<S08PacketPlayerPosLook.EnumFlags>emptySet());
+    public void setPlayerLocation(double x, double y, double z, float yaw, float pitch) {
+        // Create an empty EnumSet of EnumFlags
+        this.setPlayerLocation(x, y, z, yaw, pitch, EnumSet.noneOf(S08PacketPlayerPosLook.EnumFlags.class)); // Updated line
     }
-
-    public void setPlayerLocation(double x, double y, double z, float yaw, float pitch, Set<S08PacketPlayerPosLook.EnumFlags> relativeSet)
-    {
+    
+    public void setPlayerLocation(double x, double y, double z, float yaw, float pitch, Set<S08PacketPlayerPosLook.EnumFlags> relativeSet) {
         this.hasMoved = false;
         this.lastPosX = x;
         this.lastPosY = y;
         this.lastPosZ = z;
-
-        if (relativeSet.contains(S08PacketPlayerPosLook.EnumFlags.X))
-        {
+    
+        if (relativeSet.contains(S08PacketPlayerPosLook.EnumFlags.X)) {
             this.lastPosX += this.playerEntity.posX;
         }
-
-        if (relativeSet.contains(S08PacketPlayerPosLook.EnumFlags.Y))
-        {
+    
+        if (relativeSet.contains(S08PacketPlayerPosLook.EnumFlags.Y)) {
             this.lastPosY += this.playerEntity.posY;
         }
-
-        if (relativeSet.contains(S08PacketPlayerPosLook.EnumFlags.Z))
-        {
+    
+        if (relativeSet.contains(S08PacketPlayerPosLook.EnumFlags.Z)) {
             this.lastPosZ += this.playerEntity.posZ;
         }
-
+    
         float f = yaw;
         float f1 = pitch;
-
-        if (relativeSet.contains(S08PacketPlayerPosLook.EnumFlags.Y_ROT))
-        {
+    
+        if (relativeSet.contains(S08PacketPlayerPosLook.EnumFlags.Y_ROT)) {
             f = yaw + this.playerEntity.rotationYaw;
         }
-
-        if (relativeSet.contains(S08PacketPlayerPosLook.EnumFlags.X_ROT))
-        {
+    
+        if (relativeSet.contains(S08PacketPlayerPosLook.EnumFlags.X_ROT)) {
             f1 = pitch + this.playerEntity.rotationPitch;
         }
-
+    
         this.playerEntity.setPositionAndRotation(this.lastPosX, this.lastPosY, this.lastPosZ, f, f1);
         this.playerEntity.playerNetServerHandler.sendPacket(new S08PacketPlayerPosLook(x, y, z, yaw, pitch, relativeSet));
     }

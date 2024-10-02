@@ -225,6 +225,7 @@ public class IngestServerTester
         }
     }
 
+    @SuppressWarnings("incomplete-switch")
     public void func_153041_j()
     {
         if (!this.func_153032_e() && this.field_153047_e != IngestServerTester.IngestTestState.Uninitalized)

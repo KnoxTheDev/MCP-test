@@ -33,7 +33,7 @@ public abstract class CommandBase implements ICommand
 
     public List<String> getCommandAliases()
     {
-        return Collections.<String>emptyList();
+        return Collections.emptyList();
     }
 
     /**
@@ -234,7 +234,7 @@ public abstract class CommandBase implements ICommand
         return getEntity(p_175768_0_, p_175768_1_, Entity.class);
     }
 
-    public static <T extends Entity> T getEntity(ICommandSender commandSender, String p_175759_1_, Class <? extends T > p_175759_2_) throws EntityNotFoundException
+    public static <T extends Entity> T getEntity(ICommandSender commandSender, String p_175759_1_, Class<? extends T> p_175759_2_) throws EntityNotFoundException
     {
         Entity entity = PlayerSelector.matchOneEntity(commandSender, p_175759_1_, p_175759_2_);
         MinecraftServer minecraftserver = MinecraftServer.getServer();

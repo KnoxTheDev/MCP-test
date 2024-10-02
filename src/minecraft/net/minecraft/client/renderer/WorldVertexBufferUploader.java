@@ -8,6 +8,7 @@ import org.lwjgl.opengl.GL11;
 
 public class WorldVertexBufferUploader
 {
+    @SuppressWarnings("incomplete-switch")
     public void draw(WorldRenderer p_181679_1_)
     {
         if (p_181679_1_.getVertexCount() > 0)

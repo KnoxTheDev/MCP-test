@@ -21,7 +21,7 @@ public class RegistrySimple<K, V> implements IRegistry<K, V>
 
     public V getObject(K name)
     {
-        return this.registryObjects.get(name);
+        return (V)this.registryObjects.get(name);
     }
 
     /**
@@ -42,7 +42,7 @@ public class RegistrySimple<K, V> implements IRegistry<K, V>
 
     public Set<K> getKeys()
     {
-        return Collections.<K>unmodifiableSet(this.registryObjects.keySet());
+        return Collections.unmodifiableSet(this.registryObjects.keySet());
     }
 
     /**

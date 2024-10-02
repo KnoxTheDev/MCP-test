@@ -135,7 +135,7 @@ public class HttpUtil
         }
     }
 
-    public static ListenableFuture<?> downloadResourcePack(final File saveFile, final String packUrl, final Map<String, String> p_180192_2_, final int maxSize, final IProgressUpdate p_180192_4_, final Proxy p_180192_5_)
+    public static ListenableFuture<Object> downloadResourcePack(final File saveFile, final String packUrl, final Map<String, String> p_180192_2_, final int maxSize, final IProgressUpdate p_180192_4_, final Proxy p_180192_5_)
     {
         ListenableFuture<?> listenablefuture = field_180193_a.submit(new Runnable()
         {
@@ -163,7 +163,7 @@ public class HttpUtil
 
                         for (Entry<String, String> entry : p_180192_2_.entrySet())
                         {
-                            httpurlconnection.setRequestProperty(entry.getKey(), entry.getValue());
+                            httpurlconnection.setRequestProperty((String)entry.getKey(), (String)entry.getValue());
 
                             if (p_180192_4_ != null)
                             {
@@ -177,7 +177,7 @@ public class HttpUtil
 
                         if (p_180192_4_ != null)
                         {
-                            p_180192_4_.displayLoadingString(String.format("Downloading file (%.2f MB)...", f1 / 1000.0F / 1000.0F));
+                            p_180192_4_.displayLoadingString(String.format("Downloading file (%.2f MB)...", new Object[] {Float.valueOf(f1 / 1000.0F / 1000.0F)}));
                         }
 
                         if (saveFile.exists())
@@ -288,9 +288,8 @@ public class HttpUtil
                 }
             }
         });
-        return listenablefuture;
+        return (ListenableFuture<Object>) listenablefuture;
     }
-
 
     public static int getSuitableLanPort() throws IOException
     {

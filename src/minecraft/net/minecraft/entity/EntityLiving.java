@@ -155,7 +155,7 @@ public abstract class EntityLiving extends EntityLivingBase
     /**
      * Returns true if this entity can attack entities of the specified class.
      */
-    public boolean canAttackClass(Class <? extends EntityLivingBase > cls)
+    public boolean canAttackClass(Class<? extends EntityLivingBase> cls)
     {
         return cls != EntityGhast.class;
     }

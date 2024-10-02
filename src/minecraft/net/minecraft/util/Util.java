@@ -17,7 +17,7 @@ public class Util
         try
         {
             task.run();
-            return task.get();
+            return (V)task.get();
         }
         catch (ExecutionException executionexception)
         {

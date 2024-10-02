@@ -331,7 +331,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
     private ResourceLocation mojangLogo;
     private final MinecraftSessionService sessionService;
     private SkinManager skinManager;
-    private final Queue < FutureTask<? >> scheduledTasks = Queues. < FutureTask<? >> newArrayDeque();
+    private final Queue<FutureTask<?>> scheduledTasks = Queues.<FutureTask<?>>newArrayDeque();
     private long field_175615_aJ = 0L;
     private final Thread mcThread = Thread.currentThread();
     private ModelManager modelManager;
@@ -417,28 +417,26 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         {
             try
             {
-                if (!this.running)
+                while (this.running)
                 {
-                    break;
-                }
-
-                if (!this.hasCrashed || this.crashReporter == null)
-                {
-                    try
+                    if (!this.hasCrashed || this.crashReporter == null)
                     {
-                        this.runGameLoop();
+                        try
+                        {
+                            this.runGameLoop();
+                        }
+                        catch (OutOfMemoryError var10)
+                        {
+                            this.freeMemory();
+                            this.displayGuiScreen(new GuiMemoryErrorScreen());
+                            System.gc();
+                        }
                     }
-                    catch (OutOfMemoryError var10)
+                    else
                     {
-                        this.freeMemory();
-                        this.displayGuiScreen(new GuiMemoryErrorScreen());
-                        System.gc();
+                        this.displayCrashReport(this.crashReporter);
                     }
-
-                    continue;
                 }
-
-                this.displayCrashReport(this.crashReporter);
             }
             catch (MinecraftError var12)
             {
@@ -790,17 +788,17 @@ public class Minecraft implements IThreadListener, IPlayerUsage
     public void refreshResources()
     {
         List<IResourcePack> list = Lists.newArrayList(this.defaultResourcePacks);
-
+    
         for (ResourcePackRepository.Entry resourcepackrepository$entry : this.mcResourcePackRepository.getRepositoryEntries())
         {
             list.add(resourcepackrepository$entry.getResourcePack());
         }
-
+    
         if (this.mcResourcePackRepository.getResourcePackInstance() != null)
         {
             list.add(this.mcResourcePackRepository.getResourcePackInstance());
         }
-
+    
         try
         {
             this.mcResourceManager.reloadResources(list);
@@ -810,20 +808,20 @@ public class Minecraft implements IThreadListener, IPlayerUsage
             logger.info((String)"Caught error stitching, removing all assigned resourcepacks", (Throwable)runtimeexception);
             list.clear();
             list.addAll(this.defaultResourcePacks);
-            this.mcResourcePackRepository.setRepositories(Collections.<ResourcePackRepository.Entry>emptyList());
+            this.mcResourcePackRepository.setRepositories(Collections.<ResourcePackRepository.Entry>emptyList()); // Updated line
             this.mcResourceManager.reloadResources(list);
             this.gameSettings.resourcePacks.clear();
             this.gameSettings.incompatibleResourcePacks.clear();
             this.gameSettings.saveOptions();
         }
-
+    
         this.mcLanguageManager.parseLanguageMetadata(list);
-
+    
         if (this.renderGlobal != null)
         {
             this.renderGlobal.loadRenderers();
         }
-    }
+    }    
 
     private ByteBuffer readImageToBuffer(InputStream imageStream) throws IOException
     {
@@ -1563,6 +1561,8 @@ public class Minecraft implements IThreadListener, IPlayerUsage
             }
         }
     }
+
+    @SuppressWarnings("incomplete-switch")
 
     /**
      * Called when user clicked he's mouse right button (place)

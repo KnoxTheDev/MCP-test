@@ -17,6 +17,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 
+@SuppressWarnings("incomplete-switch")
 public class StructureStrongholdPieces
 {
     private static final StructureStrongholdPieces.PieceWeight[] pieceWeightArray = new StructureStrongholdPieces.PieceWeight[] {new StructureStrongholdPieces.PieceWeight(StructureStrongholdPieces.Straight.class, 40, 0), new StructureStrongholdPieces.PieceWeight(StructureStrongholdPieces.Prison.class, 5, 5), new StructureStrongholdPieces.PieceWeight(StructureStrongholdPieces.LeftTurn.class, 20, 0), new StructureStrongholdPieces.PieceWeight(StructureStrongholdPieces.RightTurn.class, 20, 0), new StructureStrongholdPieces.PieceWeight(StructureStrongholdPieces.RoomCrossing.class, 10, 6), new StructureStrongholdPieces.PieceWeight(StructureStrongholdPieces.StairsStraight.class, 5, 5), new StructureStrongholdPieces.PieceWeight(StructureStrongholdPieces.Stairs.class, 5, 5), new StructureStrongholdPieces.PieceWeight(StructureStrongholdPieces.Crossing.class, 5, 4), new StructureStrongholdPieces.PieceWeight(StructureStrongholdPieces.ChestCorridor.class, 5, 4), new StructureStrongholdPieces.PieceWeight(StructureStrongholdPieces.Library.class, 10, 2)
@@ -34,7 +35,7 @@ public class StructureStrongholdPieces
         }
     };
     private static List<StructureStrongholdPieces.PieceWeight> structurePieceList;
-    private static Class <? extends StructureStrongholdPieces.Stronghold > strongComponentType;
+    private static Class<? extends StructureStrongholdPieces.Stronghold> strongComponentType;
     static int totalWeight;
     private static final StructureStrongholdPieces.Stones strongholdStones = new StructureStrongholdPieces.Stones();
 
@@ -89,7 +90,7 @@ public class StructureStrongholdPieces
         return flag;
     }
 
-    private static StructureStrongholdPieces.Stronghold func_175954_a(Class <? extends StructureStrongholdPieces.Stronghold > p_175954_0_, List<StructureComponent> p_175954_1_, Random p_175954_2_, int p_175954_3_, int p_175954_4_, int p_175954_5_, EnumFacing p_175954_6_, int p_175954_7_)
+    private static StructureStrongholdPieces.Stronghold func_175954_a(Class<? extends StructureStrongholdPieces.Stronghold> p_175954_0_, List<StructureComponent> p_175954_1_, Random p_175954_2_, int p_175954_3_, int p_175954_4_, int p_175954_5_, EnumFacing p_175954_6_, int p_175954_7_)
     {
         StructureStrongholdPieces.Stronghold structurestrongholdpieces$stronghold = null;
 
@@ -753,12 +754,12 @@ public class StructureStrongholdPieces
 
     static class PieceWeight
     {
-        public Class <? extends StructureStrongholdPieces.Stronghold > pieceClass;
+        public Class<? extends StructureStrongholdPieces.Stronghold> pieceClass;
         public final int pieceWeight;
         public int instancesSpawned;
         public int instancesLimit;
 
-        public PieceWeight(Class <? extends StructureStrongholdPieces.Stronghold > p_i2076_1_, int p_i2076_2_, int p_i2076_3_)
+        public PieceWeight(Class<? extends StructureStrongholdPieces.Stronghold> p_i2076_1_, int p_i2076_2_, int p_i2076_3_)
         {
             this.pieceClass = p_i2076_1_;
             this.pieceWeight = p_i2076_2_;

@@ -14,62 +14,54 @@ import java.util.Map;
 
 public class EnumTypeAdapterFactory implements TypeAdapterFactory
 {
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type)
+    public <T> TypeAdapter<T> create(Gson p_create_1_, TypeToken<T> p_create_2_)
     {
-        Class<? super T> rawType = type.getRawType();
+        Class<T> oclass = (Class<T>)p_create_2_.getRawType();
 
-        if (!rawType.isEnum())
+        if (!oclass.isEnum())
         {
             return null;
         }
         else
         {
-            final Map<String, T> map = Maps.newHashMap();
+            final Map<String, T> map = Maps.<String, T>newHashMap();
 
-            // Cast rawType to Class<T> safely after confirming it's an enum
-            @SuppressWarnings("unchecked")
-            Class<T> enumClass = (Class<T>) rawType;
-
-            for (T t : enumClass.getEnumConstants())
+            for (T t : oclass.getEnumConstants())
             {
-                map.put(this.toLowerCase(t), t);
+                map.put(this.func_151232_a(t), t);
             }
 
             return new TypeAdapter<T>()
             {
-                @Override
-                public void write(JsonWriter out, T value) throws IOException
+                public void write(JsonWriter p_write_1_, T p_write_2_) throws IOException
                 {
-                    if (value == null)
+                    if (p_write_2_ == null)
                     {
-                        out.nullValue();
+                        p_write_1_.nullValue();
                     }
                     else
                     {
-                        out.value(EnumTypeAdapterFactory.this.toLowerCase(value));
+                        p_write_1_.value(EnumTypeAdapterFactory.this.func_151232_a(p_write_2_));
                     }
                 }
-
-                @Override
-                public T read(JsonReader in) throws IOException
+                public T read(JsonReader p_read_1_) throws IOException
                 {
-                    if (in.peek() == JsonToken.NULL)
+                    if (p_read_1_.peek() == JsonToken.NULL)
                     {
-                        in.nextNull();
-                        return null;
+                        p_read_1_.nextNull();
+                        return (T)null;
                     }
                     else
                     {
-                        return map.get(in.nextString());
+                        return (T)map.get(p_read_1_.nextString());
                     }
                 }
             };
         }
     }
 
-    private String toLowerCase(Object obj)
+    private String func_151232_a(Object p_151232_1_)
     {
-        return obj instanceof Enum ? ((Enum<?>) obj).name().toLowerCase(Locale.US) : obj.toString().toLowerCase(Locale.US);
+        return p_151232_1_ instanceof Enum ? ((Enum)p_151232_1_).name().toLowerCase(Locale.US) : p_151232_1_.toString().toLowerCase(Locale.US);
     }
 }

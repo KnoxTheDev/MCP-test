@@ -957,6 +957,7 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
                 visgraph.func_178606_a(blockpos$mutableblockpos);
             }
         }
+
         return visgraph.func_178609_b(pos);
     }
 
@@ -1074,6 +1075,7 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
         return l;
     }
 
+    @SuppressWarnings("incomplete-switch")
     private void renderBlockLayer(EnumWorldBlockLayer blockLayerIn)
     {
         this.mc.entityRenderer.enableLightmap();
@@ -2402,7 +2404,7 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
 
         private ContainerLocalRenderInformation(RenderChunk renderChunkIn, EnumFacing facingIn, int counterIn)
         {
-            this.setFacing = EnumSet.<EnumFacing>noneOf(EnumFacing.class);
+            this.setFacing = EnumSet.noneOf(EnumFacing.class);
             this.renderChunk = renderChunkIn;
             this.facing = facingIn;
             this.counter = counterIn;

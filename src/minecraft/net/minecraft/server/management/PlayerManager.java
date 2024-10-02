@@ -36,7 +36,7 @@ public class PlayerManager
     private long previousTotalWorldTime;
 
     /** x, z direction vectors: east, south, west, north */
-    private final int[][] xzDirectionsConst = new int[][] {{1, 0}, {0, 1}, { -1, 0}, {0, -1}};
+    private final int[][] xzDirectionsConst = new int[][] {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 
     public PlayerManager(WorldServer serverWorld)
     {

@@ -756,7 +756,7 @@ public class FontRenderer implements IResourceManagerReloadListener
 
             if (reverse)
             {
-                stringbuilder.insert(0, (char)c0);
+                stringbuilder.insert(0, c0);
             }
             else
             {
@@ -843,7 +843,7 @@ public class FontRenderer implements IResourceManagerReloadListener
 
     public List<String> listFormattedStringToWidth(String str, int wrapWidth)
     {
-        return Arrays.<String>asList(this.wrapFormattedStringToWidth(str, wrapWidth).split("\n"));
+        return Arrays.asList(this.wrapFormattedStringToWidth(str, wrapWidth).split("\n"));
     }
 
     /**

@@ -68,7 +68,7 @@ public abstract class GenLayer
         GenLayer genlayer6 = GenLayerZoom.magnify(1000L, lvt_9_1_, 2);
         GenLayerBiomeEdge genlayerbiomeedge = new GenLayerBiomeEdge(1000L, genlayer6);
         GenLayer lvt_10_1_ = GenLayerZoom.magnify(1000L, genlayerriverinit, 2);
-        GenLayerHills genlayerhills = new GenLayerHills(1000L, genlayerbiomeedge, lvt_10_1_);
+        GenLayer genlayerhills = new GenLayerHills(1000L, genlayerbiomeedge, lvt_10_1_);
         GenLayer genlayer5 = GenLayerZoom.magnify(1000L, genlayerriverinit, 2);
         genlayer5 = GenLayerZoom.magnify(1000L, genlayer5, j);
         GenLayerRiver genlayerriver = new GenLayerRiver(1L, genlayer5);
@@ -194,14 +194,14 @@ public abstract class GenLayer
                 {
                     public String call() throws Exception
                     {
-                        return String.valueOf((Object)biomegenbase);
+                        return String.valueOf(biomegenbase);
                     }
                 });
                 crashreportcategory.addCrashSectionCallable("Biome B", new Callable<String>()
                 {
                     public String call() throws Exception
                     {
-                        return String.valueOf((Object)biomegenbase1);
+                        return String.valueOf(biomegenbase1);
                     }
                 });
                 throw new ReportedException(crashreport);

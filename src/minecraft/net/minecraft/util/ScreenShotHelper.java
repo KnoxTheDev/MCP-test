@@ -113,7 +113,7 @@ public class ScreenShotHelper
                 file2 = new File(file1, screenshotName);
             }
 
-            ImageIO.write(bufferedimage, "png", (File)file2);
+            ImageIO.write(bufferedimage, "png", file2);
             IChatComponent ichatcomponent = new ChatComponentText(file2.getName());
             ichatcomponent.getChatStyle().setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_FILE, file2.getAbsolutePath()));
             ichatcomponent.getChatStyle().setUnderlined(Boolean.valueOf(true));

@@ -23,6 +23,8 @@ public class ItemHoe extends Item
         this.setCreativeTab(CreativeTabs.tabTools);
     }
 
+    @SuppressWarnings("incomplete-switch")
+
     /**
      * Called when a Block is right-clicked with this Item
      */

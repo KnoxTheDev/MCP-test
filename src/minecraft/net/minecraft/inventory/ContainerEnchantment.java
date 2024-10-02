@@ -50,7 +50,7 @@ public class ContainerEnchantment extends Container
         };
         this.rand = new Random();
         this.enchantLevels = new int[3];
-        this.enchantmentIds = new int[] { -1, -1, -1};
+        this.enchantmentIds = new int[] {-1, -1, -1};
         this.worldPointer = worldIn;
         this.position = pos;
         this.xpSeed = playerInv.player.getXPSeed();

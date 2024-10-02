@@ -349,7 +349,7 @@ public abstract class BiomeGenBase
                 return this.spawnableCaveCreatureList;
 
             default:
-                return Collections.<BiomeGenBase.SpawnListEntry>emptyList();
+                return Collections.emptyList();
         }
     }
 
@@ -555,7 +555,7 @@ public abstract class BiomeGenBase
         return new BiomeGenMutated(p_180277_1_, this);
     }
 
-    public Class <? extends BiomeGenBase > getBiomeClass()
+    public Class<? extends BiomeGenBase> getBiomeClass()
     {
         return this.getClass();
     }
@@ -670,11 +670,11 @@ public abstract class BiomeGenBase
 
     public static class SpawnListEntry extends WeightedRandom.Item
     {
-        public Class <? extends EntityLiving > entityClass;
+        public Class<? extends EntityLiving> entityClass;
         public int minGroupCount;
         public int maxGroupCount;
 
-        public SpawnListEntry(Class <? extends EntityLiving > entityclassIn, int weight, int groupCountMin, int groupCountMax)
+        public SpawnListEntry(Class<? extends EntityLiving> entityclassIn, int weight, int groupCountMin, int groupCountMax)
         {
             super(weight);
             this.entityClass = entityclassIn;

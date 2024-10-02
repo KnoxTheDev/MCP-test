@@ -28,7 +28,7 @@ import org.apache.logging.log4j.Logger;
 public class ChunkProviderServer implements IChunkProvider
 {
     private static final Logger logger = LogManager.getLogger();
-    private Set<Long> droppedChunksSet = Collections.<Long>newSetFromMap(new ConcurrentHashMap());
+    private Set<Long> droppedChunksSet = Collections.newSetFromMap(new ConcurrentHashMap());
 
     /** a dummy chunk, returned in place of an actual chunk. */
     private Chunk dummyChunk;

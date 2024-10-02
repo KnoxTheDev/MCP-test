@@ -19,6 +19,7 @@ public class S42PacketCombatEvent implements Packet<INetHandlerPlayClient>
     {
     }
 
+    @SuppressWarnings("incomplete-switch")
     public S42PacketCombatEvent(CombatTracker combatTrackerIn, S42PacketCombatEvent.Event combatEventType)
     {
         this.eventType = combatEventType;

@@ -18,8 +18,8 @@ import org.apache.logging.log4j.Logger;
 public abstract class TileEntity
 {
     private static final Logger logger = LogManager.getLogger();
-    private static Map < String, Class <? extends TileEntity >> nameToClassMap = Maps. < String, Class <? extends TileEntity >> newHashMap();
-    private static Map < Class <? extends TileEntity > , String > classToNameMap = Maps. < Class <? extends TileEntity > , String > newHashMap();
+    private static Map<String, Class<? extends TileEntity>> nameToClassMap = Maps.<String, Class<? extends TileEntity>>newHashMap();
+    private static Map<Class<? extends TileEntity>, String> classToNameMap = Maps.<Class<? extends TileEntity>, String>newHashMap();
 
     /** the instance of the world the tile entity is in. */
     protected World worldObj;
@@ -33,7 +33,7 @@ public abstract class TileEntity
     /**
      * Adds a new two-way mapping between the class and its string name in both hashmaps.
      */
-    private static void addMapping(Class <? extends TileEntity > cl, String id)
+    private static void addMapping(Class<? extends TileEntity> cl, String id)
     {
         if (nameToClassMap.containsKey(id))
         {
@@ -95,35 +95,27 @@ public abstract class TileEntity
     /**
      * Creates a new entity and loads its data from the specified NBT.
      */
-    public static TileEntity createAndLoadEntity(NBTTagCompound nbt)
-    {
+    public static TileEntity createAndLoadEntity(NBTTagCompound nbt) {
         TileEntity tileentity = null;
-
-        try
-        {
-            Class <? extends TileEntity > oclass = (Class)nameToClassMap.get(nbt.getString("id"));
-
-            if (oclass != null)
-            {
-                tileentity = (TileEntity)oclass.newInstance();
+    
+        try {
+            Class<? extends TileEntity> oclass = (Class)nameToClassMap.get(nbt.getString("id"));
+    
+            if (oclass != null) {
+                tileentity = oclass.getDeclaredConstructor().newInstance(); // Updated line
             }
-        }
-        catch (Exception exception)
-        {
+        } catch (Exception exception) {
             exception.printStackTrace();
         }
-
-        if (tileentity != null)
-        {
+    
+        if (tileentity != null) {
             tileentity.readFromNBT(nbt);
-        }
-        else
-        {
+        } else {
             logger.warn("Skipping BlockEntity with id " + nbt.getString("id"));
         }
-
+    
         return tileentity;
-    }
+    }    
 
     public int getBlockMetadata()
     {

@@ -98,6 +98,7 @@ public class GuiOverlayDebug extends Gui
         }
     }
 
+    @SuppressWarnings("incomplete-switch")
     protected List<String> call()
     {
         BlockPos blockpos = new BlockPos(this.mc.getRenderViewEntity().posX, this.mc.getRenderViewEntity().getEntityBoundingBox().minY, this.mc.getRenderViewEntity().posZ);

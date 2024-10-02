@@ -32,7 +32,7 @@ public class ChunkRenderDispatcher
     private final BlockingQueue<RegionRenderCacheBuilder> queueFreeRenderBuilders = Queues.<RegionRenderCacheBuilder>newArrayBlockingQueue(5);
     private final WorldVertexBufferUploader worldVertexUploader = new WorldVertexBufferUploader();
     private final VertexBufferUploader vertexUploader = new VertexBufferUploader();
-    private final Queue < ListenableFutureTask<? >> queueChunkUploads = Queues. < ListenableFutureTask<? >> newArrayDeque();
+    private final Queue<ListenableFutureTask<?>> queueChunkUploads = Queues.<ListenableFutureTask<?>>newArrayDeque();
     private final ChunkRenderWorker renderWorker;
 
     public ChunkRenderDispatcher()

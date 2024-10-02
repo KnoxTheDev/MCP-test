@@ -341,7 +341,7 @@ public class ModelBakery
 
         if (list == null)
         {
-            list = Collections.<String>singletonList(((ResourceLocation)Item.itemRegistry.getNameForObject(p_177596_1_)).toString());
+            list = Collections.singletonList(((ResourceLocation)Item.itemRegistry.getNameForObject(p_177596_1_)).toString());
         }
 
         return list;

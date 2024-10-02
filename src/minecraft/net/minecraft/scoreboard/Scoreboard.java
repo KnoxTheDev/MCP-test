@@ -69,7 +69,7 @@ public class Scoreboard
     public Collection<ScoreObjective> getObjectivesFromCriteria(IScoreObjectiveCriteria criteria)
     {
         Collection<ScoreObjective> collection = (Collection)this.scoreObjectiveCriterias.get(criteria);
-        return collection == null ? Lists.newArrayList() : Lists.newArrayList(collection);
+        return collection == null ? Lists.<ScoreObjective>newArrayList() : Lists.newArrayList(collection);
     }
 
     /**

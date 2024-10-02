@@ -18,7 +18,7 @@ public class EntityAINearestAttackableTarget<T extends EntityLivingBase> extends
 
     /** Instance of EntityAINearestAttackableTargetSorter. */
     protected final EntityAINearestAttackableTarget.Sorter theNearestAttackableTargetSorter;
-    protected Predicate <? super T > targetEntitySelector;
+    protected Predicate<? super T> targetEntitySelector;
     protected EntityLivingBase targetEntity;
 
     public EntityAINearestAttackableTarget(EntityCreature creature, Class<T> classTarget, boolean checkSight)
@@ -28,10 +28,10 @@ public class EntityAINearestAttackableTarget<T extends EntityLivingBase> extends
 
     public EntityAINearestAttackableTarget(EntityCreature creature, Class<T> classTarget, boolean checkSight, boolean onlyNearby)
     {
-        this(creature, classTarget, 10, checkSight, onlyNearby, (Predicate <? super T >)null);
+        this(creature, classTarget, 10, checkSight, onlyNearby, (Predicate<? super T>)null);
     }
 
-    public EntityAINearestAttackableTarget(EntityCreature creature, Class<T> classTarget, int chance, boolean checkSight, boolean onlyNearby, final Predicate <? super T > targetSelector)
+    public EntityAINearestAttackableTarget(EntityCreature creature, Class<T> classTarget, int chance, boolean checkSight, boolean onlyNearby, final Predicate<? super T> targetSelector)
     {
         super(creature, checkSight, onlyNearby);
         this.targetClass = classTarget;

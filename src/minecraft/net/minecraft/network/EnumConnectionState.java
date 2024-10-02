@@ -3,6 +3,7 @@ package net.minecraft.network;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 import com.google.common.collect.Maps;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import net.minecraft.network.handshake.client.C00Handshake;
 import net.minecraft.network.login.client.C00PacketLoginStart;
@@ -248,9 +249,9 @@ public enum EnumConnectionState
     private static int field_181136_e = -1;
     private static int field_181137_f = 2;
     private static final EnumConnectionState[] STATES_BY_ID = new EnumConnectionState[field_181137_f - field_181136_e + 1];
-    private static final Map < Class <? extends Packet > , EnumConnectionState > STATES_BY_CLASS = Maps. < Class <? extends Packet > , EnumConnectionState > newHashMap();
+    private static final Map<Class<? extends Packet>, EnumConnectionState> STATES_BY_CLASS = Maps.<Class<? extends Packet>, EnumConnectionState>newHashMap();
     private final int id;
-    private final Map < EnumPacketDirection, BiMap < Integer, Class <? extends Packet >>> directionMaps;
+    private final Map<EnumPacketDirection, BiMap<Integer, Class<? extends Packet>>> directionMaps;
 
     private EnumConnectionState(int protocolId)
     {
@@ -258,13 +259,13 @@ public enum EnumConnectionState
         this.id = protocolId;
     }
 
-    protected EnumConnectionState registerPacket(EnumPacketDirection direction, Class <? extends Packet > packetClass)
+    protected EnumConnectionState registerPacket(EnumPacketDirection direction, Class<? extends Packet> packetClass)
     {
-        BiMap < Integer, Class <? extends Packet >> bimap = (BiMap)this.directionMaps.get(direction);
+        BiMap<Integer, Class<? extends Packet>> bimap = (BiMap)this.directionMaps.get(direction);
 
         if (bimap == null)
         {
-            bimap = HashBiMap. < Integer, Class <? extends Packet >> create();
+            bimap = HashBiMap.<Integer, Class<? extends Packet>>create();
             this.directionMaps.put(direction, bimap);
         }
 
@@ -286,10 +287,10 @@ public enum EnumConnectionState
         return (Integer)((BiMap)this.directionMaps.get(direction)).inverse().get(packetIn.getClass());
     }
 
-    public Packet getPacket(EnumPacketDirection direction, int packetId) throws InstantiationException, IllegalAccessException {
-        Class <? extends Packet > oclass = (Class)((BiMap)this.directionMaps.get(direction)).get(Integer.valueOf(packetId));
-        return oclass == null ? null : (Packet)oclass.newInstance();
-    }
+    public Packet getPacket(EnumPacketDirection direction, int packetId) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
+        Class<? extends Packet> oclass = (Class)((BiMap)this.directionMaps.get(direction)).get(Integer.valueOf(packetId));
+        return oclass == null ? null : oclass.getDeclaredConstructor().newInstance();
+    }    
 
     public int getId()
     {
@@ -320,7 +321,7 @@ public enum EnumConnectionState
 
             for (EnumPacketDirection enumpacketdirection : enumconnectionstate.directionMaps.keySet())
             {
-                for (Class <? extends Packet > oclass : ((BiMap)enumconnectionstate.directionMaps.get(enumpacketdirection)).values())
+                for (Class<? extends Packet> oclass : (enumconnectionstate.directionMaps.get(enumpacketdirection)).values())
                 {
                     if (STATES_BY_CLASS.containsKey(oclass) && STATES_BY_CLASS.get(oclass) != enumconnectionstate)
                     {
@@ -329,7 +330,7 @@ public enum EnumConnectionState
 
                     try
                     {
-                        oclass.newInstance();
+                        oclass.getDeclaredConstructor().newInstance();
                     }
                     catch (Throwable var10)
                     {

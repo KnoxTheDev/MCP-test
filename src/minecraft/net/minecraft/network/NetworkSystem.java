@@ -75,8 +75,8 @@ public class NetworkSystem
 
     /** True if this NetworkSystem has never had his endpoints terminated */
     public volatile boolean isAlive;
-    private final List<ChannelFuture> endpoints = Collections.<ChannelFuture>synchronizedList(Lists.<ChannelFuture>newArrayList());
-    private final List<NetworkManager> networkManagers = Collections.<NetworkManager>synchronizedList(Lists.<NetworkManager>newArrayList());
+    private final List<ChannelFuture> endpoints = Collections.synchronizedList(Lists.<ChannelFuture>newArrayList());
+    private final List<NetworkManager> networkManagers = Collections.synchronizedList(Lists.<NetworkManager>newArrayList());
 
     public NetworkSystem(MinecraftServer server)
     {
@@ -91,8 +91,8 @@ public class NetworkSystem
     {
         synchronized (this.endpoints)
         {
-            Class <? extends ServerSocketChannel > oclass;
-            LazyLoadBase <? extends EventLoopGroup > lazyloadbase;
+            Class<? extends ServerSocketChannel> oclass;
+            LazyLoadBase<? extends EventLoopGroup> lazyloadbase;
 
             if (Epoll.isAvailable() && this.mcServer.shouldUseNativeTransport())
             {
@@ -220,9 +220,9 @@ public class NetworkSystem
 
                             logger.warn((String)("Failed to handle packet for " + networkmanager.getRemoteAddress()), (Throwable)exception);
                             final ChatComponentText chatcomponenttext = new ChatComponentText("Internal server error");
-                            networkmanager.sendPacket(new S40PacketDisconnect(chatcomponenttext), new GenericFutureListener < Future <? super Void >> ()
+                            networkmanager.sendPacket(new S40PacketDisconnect(chatcomponenttext), new GenericFutureListener<Future<? super Void>>()
                             {
-                                public void operationComplete(Future <? super Void > p_operationComplete_1_) throws Exception
+                                public void operationComplete(Future<? super Void> p_operationComplete_1_) throws Exception
                                 {
                                     networkmanager.closeChannel(chatcomponenttext);
                                 }

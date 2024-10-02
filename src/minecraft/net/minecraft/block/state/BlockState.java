@@ -63,7 +63,7 @@ public class BlockState
             blockstate$stateimplementation1.buildPropertyValueTable(map);
         }
 
-        this.validStates = ImmutableList.copyOf(list);
+        this.validStates = ImmutableList.<IBlockState>copyOf(list);
     }
 
     public ImmutableList<IBlockState> getValidStates()
@@ -117,7 +117,7 @@ public class BlockState
 
         public Collection<IProperty> getPropertyNames()
         {
-            return Collections.<IProperty>unmodifiableCollection(this.properties.keySet());
+            return Collections.unmodifiableCollection(this.properties.keySet());
         }
 
         public <T extends Comparable<T>> T getValue(IProperty<T> property)
@@ -178,13 +178,13 @@ public class BlockState
             {
                 Table<IProperty, Comparable, IBlockState> table = HashBasedTable.<IProperty, Comparable, IBlockState>create();
 
-                for (IProperty <? extends Comparable > iproperty : this.properties.keySet())
+                for (IProperty<? extends Comparable> iproperty : this.properties.keySet())
                 {
                     for (Comparable comparable : iproperty.getAllowedValues())
                     {
                         if (comparable != this.properties.get(iproperty))
                         {
-                            table.put(iproperty, comparable, map.get(this.getPropertiesWithValue(iproperty, comparable)));
+                            table.put(iproperty, comparable, (IBlockState)map.get(this.getPropertiesWithValue(iproperty, comparable)));
                         }
                     }
                 }

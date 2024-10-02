@@ -33,8 +33,9 @@ public class ContainerPlayer extends Container
             }
         }
 
-        for (final int k = 0; k < 4; ++k)
+        for (int k = 0; k < 4; ++k)
         {
+            final int k_f = k;
             this.addSlotToContainer(new Slot(playerInventory, playerInventory.getSizeInventory() - 1 - k, 8, 8 + k * 18)
             {
                 public int getSlotStackLimit()
@@ -43,11 +44,11 @@ public class ContainerPlayer extends Container
                 }
                 public boolean isItemValid(ItemStack stack)
                 {
-                    return stack == null ? false : (stack.getItem() instanceof ItemArmor ? ((ItemArmor)stack.getItem()).armorType == k : (stack.getItem() != Item.getItemFromBlock(Blocks.pumpkin) && stack.getItem() != Items.skull ? false : k == 0));
+                    return stack == null ? false : (stack.getItem() instanceof ItemArmor ? ((ItemArmor)stack.getItem()).armorType == k_f : (stack.getItem() != Item.getItemFromBlock(Blocks.pumpkin) && stack.getItem() != Items.skull ? false : k_f == 0));
                 }
                 public String getSlotTexture()
                 {
-                    return ItemArmor.EMPTY_SLOT_NAMES[k];
+                    return ItemArmor.EMPTY_SLOT_NAMES[k_f];
                 }
             });
         }

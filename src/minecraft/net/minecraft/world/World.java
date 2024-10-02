@@ -2992,7 +2992,7 @@ public abstract class World implements IBlockAccess
         return this.getEntitiesInAABBexcluding(entityIn, bb, EntitySelectors.NOT_SPECTATING);
     }
 
-    public List<Entity> getEntitiesInAABBexcluding(Entity entityIn, AxisAlignedBB boundingBox, Predicate <? super Entity > predicate)
+    public List<Entity> getEntitiesInAABBexcluding(Entity entityIn, AxisAlignedBB boundingBox, Predicate<? super Entity> predicate)
     {
         List<Entity> list = Lists.<Entity>newArrayList();
         int i = MathHelper.floor_double((boundingBox.minX - 2.0D) / 16.0D);
@@ -3014,42 +3014,42 @@ public abstract class World implements IBlockAccess
         return list;
     }
 
-    public <T extends Entity> List<T> getEntities(Class <? extends T > entityType, Predicate <? super T > filter)
+    public <T extends Entity> List<T> getEntities(Class<? extends T> entityType, Predicate<? super T> filter)
     {
         List<T> list = Lists.<T>newArrayList();
 
         for (Entity entity : this.loadedEntityList)
         {
-            if (entityType.isAssignableFrom(entity.getClass()) && filter.apply(entity))
+            if (entityType.isAssignableFrom(entity.getClass()) && filter.apply((T)entity))
             {
-                list.add(entity);
+                list.add((T)entity);
             }
         }
 
         return list;
     }
 
-    public <T extends Entity> List<T> getPlayers(Class <? extends T > playerType, Predicate <? super T > filter)
+    public <T extends Entity> List<T> getPlayers(Class<? extends T> playerType, Predicate<? super T> filter)
     {
         List<T> list = Lists.<T>newArrayList();
 
         for (Entity entity : this.playerEntities)
         {
-            if (playerType.isAssignableFrom(entity.getClass()) && filter.apply(entity))
+            if (playerType.isAssignableFrom(entity.getClass()) && filter.apply((T)entity))
             {
-                list.add(entity);
+                list.add((T)entity);
             }
         }
 
         return list;
     }
 
-    public <T extends Entity> List<T> getEntitiesWithinAABB(Class <? extends T > classEntity, AxisAlignedBB bb)
+    public <T extends Entity> List<T> getEntitiesWithinAABB(Class<? extends T> classEntity, AxisAlignedBB bb)
     {
         return this.<T>getEntitiesWithinAABB(classEntity, bb, EntitySelectors.NOT_SPECTATING);
     }
 
-    public <T extends Entity> List<T> getEntitiesWithinAABB(Class <? extends T > clazz, AxisAlignedBB aabb, Predicate <? super T > filter)
+    public <T extends Entity> List<T> getEntitiesWithinAABB(Class<? extends T> clazz, AxisAlignedBB aabb, Predicate<? super T> filter)
     {
         int i = MathHelper.floor_double((aabb.minX - 2.0D) / 16.0D);
         int j = MathHelper.floor_double((aabb.maxX + 2.0D) / 16.0D);
@@ -3071,7 +3071,7 @@ public abstract class World implements IBlockAccess
         return list;
     }
 
-    public <T extends Entity> T findNearestEntityWithinAABB(Class <? extends T > entityType, AxisAlignedBB aabb, T closestTo)
+    public <T extends Entity> T findNearestEntityWithinAABB(Class<? extends T> entityType, AxisAlignedBB aabb, T closestTo)
     {
         List<T> list = this.<T>getEntitiesWithinAABB(entityType, aabb);
         T t = null;
@@ -3079,7 +3079,7 @@ public abstract class World implements IBlockAccess
 
         for (int i = 0; i < list.size(); ++i)
         {
-            T t1 = (Entity)list.get(i);
+            T t1 = list.get(i);
 
             if (t1 != closestTo && EntitySelectors.NOT_SPECTATING.apply(t1))
             {
@@ -3609,7 +3609,7 @@ public abstract class World implements IBlockAccess
      * Loads an existing MapDataBase corresponding to the given String id from disk using the MapStorage, instantiating
      * the given Class, or returns null if none such file exists. args: Class to instantiate, String dataid
      */
-    public WorldSavedData loadItemData(Class <? extends WorldSavedData > clazz, String dataID)
+    public WorldSavedData loadItemData(Class<? extends WorldSavedData> clazz, String dataID)
     {
         return this.mapStorage.loadData(clazz, dataID);
     }

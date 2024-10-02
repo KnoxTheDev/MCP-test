@@ -250,10 +250,12 @@ public class EffectRenderer
         GlStateManager.blendFunc(770, 771);
         GlStateManager.alphaFunc(516, 0.003921569F);
 
-        for (final int i = 0; i < 3; ++i)
+        for (int i = 0; i < 3; ++i)
         {
             for (int j = 0; j < 2; ++j)
             {
+                final int i_f = i;
+
                 if (!this.fxLayers[i][j].isEmpty())
                 {
                     switch (j)
@@ -305,7 +307,7 @@ public class EffectRenderer
                             {
                                 public String call() throws Exception
                                 {
-                                    return i == 0 ? "MISC_TEXTURE" : (i == 1 ? "TERRAIN_TEXTURE" : (i == 3 ? "ENTITY_PARTICLE_TEXTURE" : "Unknown - " + i));
+                                    return i_f == 0 ? "MISC_TEXTURE" : (i_f == 1 ? "TERRAIN_TEXTURE" : (i_f == 3 ? "ENTITY_PARTICLE_TEXTURE" : "Unknown - " + i_f));
                                 }
                             });
                             throw new ReportedException(crashreport);

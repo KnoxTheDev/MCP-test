@@ -72,7 +72,7 @@ public class SimpleResource implements IResource
                 }
             }
 
-            T t = (IMetadataSection)this.mapMetadataSections.get(p_110526_1_);
+            T t = (T)this.mapMetadataSections.get(p_110526_1_);
 
             if (t == null)
             {

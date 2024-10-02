@@ -46,11 +46,6 @@ public class MessageSerializer extends MessageToByteEncoder<Packet>
 
             try
             {
-                if (p_encode_2_ instanceof S0CPacketSpawnPlayer)
-                {
-                    p_encode_2_ = p_encode_2_;
-                }
-
                 p_encode_2_.writePacketData(packetbuffer);
             }
             catch (Throwable throwable)

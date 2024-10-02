@@ -12,9 +12,9 @@ import java.util.Set;
 
 public class ClassInheritanceMultiMap<T> extends AbstractSet<T>
 {
-    private static final Set < Class<? >> field_181158_a = Sets. < Class<? >> newHashSet();
-    private final Map < Class<?>, List<T >> map = Maps. < Class<?>, List<T >> newHashMap();
-    private final Set < Class<? >> knownKeys = Sets. < Class<? >> newIdentityHashSet();
+    private static final Set<Class<?>> field_181158_a = Sets.<Class<?>>newHashSet();
+    private final Map<Class<?>, List<T>> map = Maps.<Class<?>, List<T>>newHashMap();
+    private final Set<Class<?>> knownKeys = Sets.<Class<?>>newIdentityHashSet();
     private final Class<T> baseClass;
     private final List<T> values = Lists.<T>newArrayList();
 
@@ -81,7 +81,7 @@ public class ClassInheritanceMultiMap<T> extends AbstractSet<T>
 
         if (list == null)
         {
-            this.map.put(parentClass, Lists.newArrayList(new Object[] {value}));
+            this.map.put(parentClass, Lists.newArrayList(value));
         }
         else
         {
@@ -91,7 +91,7 @@ public class ClassInheritanceMultiMap<T> extends AbstractSet<T>
 
     public boolean remove(Object p_remove_1_)
     {
-        T t = p_remove_1_;
+        T t = (T)p_remove_1_;
         boolean flag = false;
 
         for (Class<?> oclass : this.knownKeys)
@@ -138,7 +138,7 @@ public class ClassInheritanceMultiMap<T> extends AbstractSet<T>
 
     public Iterator<T> iterator()
     {
-        return this.values.isEmpty() ? Iterators.emptyIterator() : Iterators.unmodifiableIterator(this.values.iterator());
+        return this.values.isEmpty() ? Iterators.<T>emptyIterator() : Iterators.unmodifiableIterator(this.values.iterator());
     }
 
     public int size()

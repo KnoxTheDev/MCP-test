@@ -434,8 +434,6 @@ public class EntityRenderer implements IResourceManagerReloadListener
                     {
                         flag = true;
                     }
-
-                    d0 = d0;
                 }
 
                 if (this.mc.objectMouseOver != null)

@@ -56,7 +56,7 @@ public class Stitcher
     public void doStitch()
     {
         Stitcher.Holder[] astitcher$holder = (Stitcher.Holder[])this.setStitchHolders.toArray(new Stitcher.Holder[this.setStitchHolders.size()]);
-        Arrays.sort((Object[])astitcher$holder);
+        Arrays.sort(astitcher$holder);
 
         for (Stitcher.Holder stitcher$holder : astitcher$holder)
         {

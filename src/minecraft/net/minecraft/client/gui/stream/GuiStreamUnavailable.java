@@ -102,6 +102,8 @@ public class GuiStreamUnavailable extends GuiScreen
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 
+    @SuppressWarnings("incomplete-switch")
+
     /**
      * Called by the controls from the buttonList when activated. (Mouse pressed for buttons)
      */
@@ -218,7 +220,7 @@ public class GuiStreamUnavailable extends GuiScreen
         }
         else if (istream.func_152912_E() != null)
         {
-            List<ChatComponentTranslation> list1 = Arrays.<ChatComponentTranslation>asList(new ChatComponentTranslation[] {new ChatComponentTranslation("stream.unavailable.initialization_failure.extra", new Object[]{ErrorCode.getString(istream.func_152912_E())})});
+            List<ChatComponentTranslation> list1 = Arrays.asList(new ChatComponentTranslation[] {new ChatComponentTranslation("stream.unavailable.initialization_failure.extra", new Object[]{ErrorCode.getString(istream.func_152912_E())})});
             minecraft.displayGuiScreen(new GuiStreamUnavailable(p_152321_0_, GuiStreamUnavailable.Reason.INITIALIZATION_FAILURE, list1));
         }
         else
